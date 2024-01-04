@@ -1,4 +1,8 @@
 # Screwdriver API
+
+[![GitHub Workflow Status][GitHub Workflow Status]](https://github.com/QubitPi/screwdriver-cd-screwdriver/actions/workflows/ci-cd.yml)
+![Last Commit](https://img.shields.io/github/last-commit/QubitPi/screwdriver-cd-screwdriver/master?logo=github&style=for-the-badge)
+
 [![Version][npm-image]][npm-url] [![Pulls][docker-pulls]][docker-url] [![Stars][docker-stars]][docker-url] [![Build Status][status-image]][status-url] [![Open Issues][issues-image]][issues-url] [![Coverage][cov-image]][cov-url] [![Vulnerabilities][vul-image]][vul-url] ![License][license-image] [![Slack][slack-image]][slack-url] [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4689/badge)](https://bestpractices.coreinfrastructure.org/projects/4689)
 
 > API for the Screwdriver CD service
@@ -212,3 +216,5 @@ Code licensed under the BSD 3-Clause license. See [LICENSE file](https://github.
 [nomad]: https://www.hashicorp.com/products/nomad
 [docker]: https://www.docker.com/products/docker
 [kubectl]: https://kubernetes.io/docs/user-guide/kubectl-overview/
+
+[GitHub Workflow Status]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-screwdriver/ci-cd.yml?branch=master&logo=github&style=for-the-badge
