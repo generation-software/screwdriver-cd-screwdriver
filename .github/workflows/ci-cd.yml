@@ -1,0 +1,24 @@
+# Copyright Jiaqi Liu. All rights reserved.
+---
+name: Screwdriver API CI/CD
+
+"on":
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set node version to 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Run unit tests
+        run: npm test
