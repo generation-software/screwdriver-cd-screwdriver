@@ -1,9 +1,13 @@
 # Screwdriver API
 
-[![GitHub Workflow Status][GitHub Workflow Status]](https://github.com/QubitPi/screwdriver-cd-screwdriver/actions/workflows/ci-cd.yml)
-![Last Commit](https://img.shields.io/github/last-commit/QubitPi/screwdriver-cd-screwdriver/master?logo=github&style=for-the-badge)
-
-[![Version][npm-image]][npm-url] [![Pulls][docker-pulls]][docker-url] [![Stars][docker-stars]][docker-url] [![Build Status][status-image]][status-url] [![Open Issues][issues-image]][issues-url] [![Coverage][cov-image]][cov-url] [![Vulnerabilities][vul-image]][vul-url] ![License][license-image] [![Slack][slack-image]][slack-url] [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4689/badge)](https://bestpractices.coreinfrastructure.org/projects/4689)
+[![NPM][NPM badge]][NPM URL]
+[![Docker][Docker badge]][Docker URL]
+[![Coverage Status][Coverage badge]][Coverage URL]
+[![Vulnerabilities][Snyk badge]][Snyk URL]
+[![GitHub Workflow Status][GitHub Workflow Status badge]][GitHub Workflow Status URL]
+![Last Commit][GitHub Commit badge]
+![License][License badge]
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/8283/badge)](https://bestpractices.coreinfrastructure.org/projects/8283)
 
 > API for the Screwdriver CD service
 
@@ -30,37 +34,37 @@ For more information about Screwdriver, check out our [homepage](http://screwdri
 
 This API comes preloaded with 18 (eighteen) resources:
 
- - [auth](plugins/auth/README.md)
- - [banners](plugins/banners/README.md)
- - [builds](plugins/builds/README.md)
- - [buildClusters](plugins/buildClusters/README.md)
- - [collections](plugins/collections/README.md)
- - [commands](plugins/commands/README.md)
- - [coverage](plugins/coverage/README.md) - optional
- - [events](plugins/events/README.md)
- - [jobs](plugins/jobs/README.md)
- - [pipelines](plugins/pipelines/README.md)
- - [secrets](plugins/secrets/README.md)
- - [stages](plugins/stages/README.md)
- - [stageBuilds](plugins/stageBuilds/README.md)
- - [templates](plugins/templates/README.md)
- - [tokens](plugins/tokens/README.md)
- - [webhooks](plugins/webhooks/README.md)
- - [stats](plugins/stats.js)
- - [isAdmin](plugins/isAdmin.js)
+- [auth](plugins/auth/README.md)
+- [banners](plugins/banners/README.md)
+- [builds](plugins/builds/README.md)
+- [buildClusters](plugins/buildClusters/README.md)
+- [collections](plugins/collections/README.md)
+- [commands](plugins/commands/README.md)
+- [coverage](plugins/coverage/README.md) - optional
+- [events](plugins/events/README.md)
+- [jobs](plugins/jobs/README.md)
+- [pipelines](plugins/pipelines/README.md)
+- [secrets](plugins/secrets/README.md)
+- [stages](plugins/stages/README.md)
+- [stageBuilds](plugins/stageBuilds/README.md)
+- [templates](plugins/templates/README.md)
+- [tokens](plugins/tokens/README.md)
+- [webhooks](plugins/webhooks/README.md)
+- [stats](plugins/stats.js)
+- [isAdmin](plugins/isAdmin.js)
 
 Three (3) option for datastores:
- - Postgres, MySQL, and Sqlite (`sequelize`)
+- Postgres, MySQL, and Sqlite (`sequelize`)
 
 Three (3) options for executor:
- - Kubernetes (`k8s`)
- - Docker (`docker`)
- - Nomad (`nomad`)
+- Kubernetes (`k8s`)
+- Docker (`docker`)
+- Nomad (`nomad`)
 
 Three (3) options for SCM:
- - GitHub (`github`)
- - GitLab (`gitlab`)
- - Bitbucket (`bitbucket`)
+- GitHub (`github`)
+- GitLab (`gitlab`)
+- Bitbucket (`bitbucket`)
 
 ### Prerequisites
 To use Screwdriver, you will need the following prerequisites:
@@ -198,25 +202,23 @@ To start contributing to Screwdriver, have a look at our guidelines, as well as 
 
 Code licensed under the BSD 3-Clause license. See [LICENSE file](https://github.com/screwdriver-cd/screwdriver/blob/master/LICENSE) for terms.
 
-[npm-image]: https://img.shields.io/npm/v/screwdriver-api.svg
-[npm-url]: https://npmjs.org/package/screwdriver-api
-[cov-image]: https://coveralls.io/repos/github/screwdriver-cd/screwdriver/badge.svg?branch=master
-[cov-url]: https://coveralls.io/github/screwdriver-cd/screwdriver?branch=master
-[vul-image]: https://snyk.io/test/github/screwdriver-cd/screwdriver.git/badge.svg
-[vul-url]: https://snyk.io/test/github/screwdriver-cd/screwdriver.git
-[docker-pulls]: https://img.shields.io/docker/pulls/screwdrivercd/screwdriver.svg
-[docker-stars]: https://img.shields.io/docker/stars/screwdrivercd/screwdriver.svg
-[docker-url]: https://hub.docker.com/r/screwdrivercd/screwdriver/
-[license-image]: https://img.shields.io/npm/l/screwdriver-api.svg
-[issues-image]: https://img.shields.io/github/issues/screwdriver-cd/screwdriver.svg
-[issues-url]: https://github.com/screwdriver-cd/screwdriver/issues
-[status-image]: https://cd.screwdriver.cd/pipelines/1/badge
-[status-url]: https://cd.screwdriver.cd/pipelines/1
-[slack-image]: http://slack.screwdriver.cd/badge.svg
-[slack-url]: http://slack.screwdriver.cd/
-[docker-compose]: https://www.docker.com/products/docker-compose
-[nomad]: https://www.hashicorp.com/products/nomad
+[Coverage badge]: https://coveralls.io/repos/github/QubitPi/screwdriver-cd-screwdriver/badge.svg?branch=master
+[Coverage URL]: https://coveralls.io/github/QubitPi/screwdriver-cd-screwdriver?branch=master
+
 [docker]: https://www.docker.com/products/docker
+[Docker badge]: https://img.shields.io/badge/Test%20&%20Dev-309DEE?style=for-the-badge&logo=docker&logoColor=white
+[Docker URL]: https://hub.docker.com/r/jack20191124/screwdriver
+
+[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-screwdriver/ci-cd.yml?branch=master&logo=github&style=for-the-badge
+[GitHub Workflow Status URL]: https://github.com/QubitPi/screwdriver-cd-screwdriver/actions/workflows/ci-cd.yml
+[GitHub Commit badge]: https://img.shields.io/github/last-commit/QubitPi/screwdriver-cd-screwdriver/master?logo=github&style=for-the-badge
+
 [kubectl]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 
-[GitHub Workflow Status]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-screwdriver/ci-cd.yml?branch=master&logo=github&style=for-the-badge
+[License badge]: https://img.shields.io/npm/l/screwdriver-api.svg?style=for-the-badge
+
+[NPM badge]: https://img.shields.io/npm/v/screwdriver-cd-api.svg&style=for-the-badge
+[NPM URL]: https://npmjs.org/package/screwdriver-cd-api
+
+[Snyk badge]: https://snyk.io/test/github/QubitPi/screwdriver-cd-screwdriver.git/badge.svg
+[Snyk URL]: https://snyk.io/test/github/QubitPi/screwdriver-cd-screwdriver.git
