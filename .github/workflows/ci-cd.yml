@@ -23,6 +23,12 @@ jobs:
                   node-version: 18
             - run: npm install
             - run: npm test
+            - name: Coveralls
+              uses: coverallsapp/github-action@v2
+              with:
+                  COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+              env:
+                  COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
     docker-test:
         name: Test Docker Image Build
@@ -78,7 +84,7 @@ jobs:
     docker-image:
         name: Release Docker Image
         if: github.ref == 'refs/heads/master'
-        needs: [tests, docker-test]
+        needs: release
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
