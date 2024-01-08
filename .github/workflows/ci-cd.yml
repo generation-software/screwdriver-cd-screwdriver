@@ -8,6 +8,10 @@ name: Screwdriver API CI/CD
         branches:
             - master
 
+env:
+    USER: QubitPi
+    EMAIL: jack20220723@gmail.com
+
 jobs:
     tests:
         name: Tests
@@ -20,9 +24,8 @@ jobs:
             - run: npm install
             - run: npm test
 
-    docker-image:
-        name: Build Test & Release Docker Image
-        needs: tests
+    docker-test:
+        name: Test Docker Image Build
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -36,21 +39,66 @@ jobs:
               with:
                   context: .
                   push: false
+
+    release:
+        name: Publish NPM Packages
+        if: github.ref == 'refs/heads/master'
+        needs: [tests, docker-test]
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0 # this is needed for feching tags for "tag-for-release.bash" below
+            - name: Set node version to 18
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  registry-url: "https://registry.npmjs.org"
+            - name: Download auto-version bump scripts
+              run: |
+                  git clone https://github.com/QubitPi/hashicorp-aws.git ../hashicorp-aws
+                  cp ../hashicorp-aws/auxiliary/github/tag-for-release.bash .github/
+                  cp ../hashicorp-aws/auxiliary/github/upversion.py .github/
+            - name: Tag for release
+              run: |
+                  git config --global user.name '$USER'
+                  git config --global user.email '$EMAIL'
+                  .github/tag-for-release.bash
+            - name: Set release version
+              run: |
+                  VERSION=$(git describe)
+                  npm version $VERSION
+            - name: Publish to NPM Packages
+              run: |
+                  npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+                  npm publish --access public
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    docker-image:
+        name: Release Docker Image
+        if: github.ref == 'refs/heads/master'
+        needs: [tests, docker-test]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Set up QEMU
+              uses: docker/setup-qemu-action@v2
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v2
             - name: Login to DockerHub
-              if: github.ref == 'refs/heads/master'
               uses: docker/login-action@v2
               with:
                   username: ${{ secrets.DOCKERHUB_USERNAME }}
                   password: ${{ secrets.DOCKERHUB_TOKEN }}
             - name: Push image to DockerHub
-              if: github.ref == 'refs/heads/master'
               uses: docker/build-push-action@v3
               with:
                   context: .
                   push: true
                   tags: ${{ secrets.DOCKERHUB_USERNAME }}/screwdriver:latest
             - name: Docker Hub Description
-              if: github.ref == 'refs/heads/master'
               uses: peter-evans/dockerhub-description@v3
               with:
                   username: ${{ secrets.DOCKERHUB_USERNAME }}
