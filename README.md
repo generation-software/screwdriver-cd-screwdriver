@@ -2,11 +2,12 @@
 
 [![NPM][NPM badge]][NPM URL]
 [![Docker][Docker badge]][Docker URL]
-[![Coverage Status][Coverage badge]][Coverage URL]
-[![Vulnerabilities][Snyk badge]][Snyk URL]
 [![GitHub Workflow Status][GitHub Workflow Status badge]][GitHub Workflow Status URL]
 ![Last Commit][GitHub Commit badge]
 ![License][License badge]
+
+[![Coverage Status][Coverage badge]][Coverage URL]
+[![Vulnerabilities][Snyk badge]][Snyk URL]
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/8283/badge)](https://bestpractices.coreinfrastructure.org/projects/8283)
 
 > API for the Screwdriver CD service
