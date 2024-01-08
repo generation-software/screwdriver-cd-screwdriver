@@ -12,7 +12,7 @@ RUN npm install -g npm
 RUN npm cache clean -f
 
 # Install Screwdriver API
-RUN npm install --fetch-timeout=1200000 screwdriver-api@$VERSION
+RUN npm install screwdriver-cd-api@$VERSION
 WORKDIR /usr/src/app/node_modules/screwdriver-api
 
 # Setup configuration folder
