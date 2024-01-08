@@ -108,7 +108,7 @@
     "screwdriver-data-schema": "^v23.0.0",
     "screwdriver-datastore-sequelize": "^8.1.1",
     "screwdriver-executor-base": "^9.0.1",
-    "screwdriver-executor-docker": "^6.0.0",
+    "screwdriver-cd-executor-docker": "^6.0.1",
     "screwdriver-executor-k8s": "^15.0.1",
     "screwdriver-executor-k8s-vm": "^4.3.3",
     "screwdriver-executor-queue": "^4.0.0",
