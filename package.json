@@ -37,7 +37,7 @@
       "screwdriver-config-parser",
       "screwdriver-data-schema",
       "screwdriver-datastore-sequelize",
-      "screwdriver-executor-docker",
+      "screwdriver-cd-executor-docker",
       "screwdriver-executor-k8s",
       "screwdriver-executor-k8s-vm",
       "screwdriver-executor-queue",
