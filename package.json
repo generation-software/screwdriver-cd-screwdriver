@@ -59,6 +59,7 @@
   "license": "BSD-3-Clause",
   "author": "Darren Matsumoto <aeneascorrupt@gmail.com>",
   "contributors": [
+    "Jiaqi Liu <jack20220723@gmail.com>",
     "Dao Lam <daolam112@gmail.com>",
     "Darren Matsumoto <aeneascorrupt@gmail.com>",
     "Dayanand Sagar <sagar1312@gmail.com>",
@@ -115,7 +116,7 @@
     "screwdriver-data-schema": "^25.6.0",
     "screwdriver-datastore-sequelize": "^10.0.0",
     "screwdriver-executor-base": "^11.0.0",
-    "screwdriver-executor-docker": "^8.0.1",
+    "screwdriver-cd-executor-docker": "^8.0.1",
     "screwdriver-executor-k8s": "^17.1.0",
     "screwdriver-executor-k8s-vm": "^5.0.0",
     "screwdriver-executor-queue": "^6.0.0",
