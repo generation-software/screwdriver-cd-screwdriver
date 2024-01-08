@@ -216,7 +216,7 @@ Code licensed under the BSD 3-Clause license. See [LICENSE file](https://github.
 
 [kubectl]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 
-[License badge]: https://img.shields.io/npm/l/screwdriver-api.svg?style=for-the-badge
+[License badge]: https://img.shields.io/npm/l/screwdriver-cd-api.svg?style=for-the-badge
 
 [NPM badge]: https://img.shields.io/npm/v/screwdriver-cd-api.svg&style=for-the-badge
 [NPM URL]: https://npmjs.org/package/screwdriver-cd-api
