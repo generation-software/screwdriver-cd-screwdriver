@@ -137,7 +137,7 @@ const pipelineFactory = Models.PipelineFactory.getInstance({
 const executorConfig = hoek.clone(config.get('executor'));
 
 executorConfig[executorConfig.plugin].options.pipelineFactory = pipelineFactory;
-const ExecutorPlugin = require(`screwdriver-executor-${executorConfig.plugin}`);
+const ExecutorPlugin = require(`screwdriver-cd-executor-${executorConfig.plugin}`);
 const executor = new ExecutorPlugin({
     ecosystem: hoek.clone(ecosystem),
     ...executorConfig[executorConfig.plugin].options
