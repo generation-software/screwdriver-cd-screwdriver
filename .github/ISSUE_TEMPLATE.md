@@ -1,21 +1,5 @@
-Changelog
----------
+**What happened**:
 
-### Added
+**What you expected to happen**:
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-
-Checklist
----------
-
-- [ ] Test
-- [ ] Self-review
-- [ ] Documentation
+**How to reproduce it**:
