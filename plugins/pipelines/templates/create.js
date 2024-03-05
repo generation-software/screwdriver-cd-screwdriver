@@ -2,7 +2,7 @@
 
 const boom = require('@hapi/boom');
 const schema = require('screwdriver-data-schema');
-const validator = require('screwdriver-template-validator').parsePipelineTemplate;
+const validator = require('screwdriver-cd-template-validator').parsePipelineTemplate;
 const templateSchema = schema.api.templateValidator;
 
 module.exports = () => ({
