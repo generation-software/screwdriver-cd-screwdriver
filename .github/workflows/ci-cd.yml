@@ -63,8 +63,8 @@ jobs:
             - name: Download auto-version bump scripts
               run: |
                   git clone https://github.com/QubitPi/hashicorp-aws.git ../hashicorp-aws
-                  cp ../hashicorp-aws/auxiliary/github/tag-for-release.bash .github/
-                  cp ../hashicorp-aws/auxiliary/github/upversion.py .github/
+                  cp ../hashicorp-aws/.github/tag-for-release.bash .github/
+                  cp ../hashicorp-aws/.github/upversion.py .github/
             - name: Tag for release
               run: |
                   git config --global user.name '$USER'
