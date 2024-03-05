@@ -124,7 +124,7 @@
     "screwdriver-scm-github": "^12.2.4",
     "screwdriver-scm-gitlab": "^3.1.0",
     "screwdriver-scm-router": "^7.0.0",
-    "screwdriver-template-validator": "^7.0.0",
+    "screwdriver-cd-template-validator": "^7.0.3",
     "screwdriver-workflow-parser": "^4.1.1",
     "sqlite3": "^5.1.4",
     "stream": "0.0.2",
