@@ -3,7 +3,7 @@
 const boom = require('@hapi/boom');
 const schema = require('screwdriver-data-schema');
 const templateSchema = schema.api.templateValidator;
-const pipelineValidator = require('screwdriver-template-validator').parsePipelineTemplate;
+const pipelineValidator = require('screwdriver-cd-template-validator').parsePipelineTemplate;
 
 module.exports = () => ({
     method: 'POST',
