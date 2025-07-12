@@ -3,7 +3,6 @@
 [![NPM][NPM badge]][NPM URL]
 [![Docker][Docker badge]][Docker URL]
 [![GitHub Workflow Status][GitHub Workflow Status badge]][GitHub Workflow Status URL]
-![Last Commit][GitHub Commit badge]
 ![License][License badge]
 
 [![Coverage Status][Coverage badge]][Coverage URL]
@@ -210,9 +209,8 @@ Code licensed under the BSD 3-Clause license. See [LICENSE file](https://github.
 [Docker badge]: https://img.shields.io/badge/Test%20&%20Dev-309DEE?style=for-the-badge&logo=docker&logoColor=white
 [Docker URL]: https://hub.docker.com/r/jack20191124/screwdriver
 
-[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-screwdriver/ci-cd.yml?branch=master&logo=github&style=for-the-badge
-[GitHub Workflow Status URL]: https://github.com/QubitPi/screwdriver-cd-screwdriver/actions/workflows/ci-cd.yml
-[GitHub Commit badge]: https://img.shields.io/github/last-commit/QubitPi/screwdriver-cd-screwdriver/master?logo=github&style=for-the-badge
+[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-screwdriver/ci-cd.yaml?branch=master&logo=github&style=for-the-badge
+[GitHub Workflow Status URL]: https://github.com/QubitPi/screwdriver-cd-screwdriver/actions/workflows/ci-cd.yaml
 
 [kubectl]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 

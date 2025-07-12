@@ -1,6 +1,6 @@
 # Copyright Jiaqi Liu. All rights reserved.
 ---
-name: Screwdriver API CI/CD
+name: CI/CD
 
 "on":
     pull_request:
@@ -62,9 +62,9 @@ jobs:
                   registry-url: "https://registry.npmjs.org"
             - name: Download auto-version bump scripts
               run: |
-                  git clone https://github.com/QubitPi/hashicorp-aws.git ../hashicorp-aws
-                  cp ../hashicorp-aws/.github/version-bump/tag-for-release.bash .github/
-                  cp ../hashicorp-aws/.github/version-bump/upversion.py .github/
+                git clone https://github.com/generation-software/.github.git ../scripts
+                cp ../scripts/.github/version-bump/tag-for-release.bash .github/
+                cp ../scripts/.github/version-bump/upversion.py .github/
             - name: Tag for release
               run: |
                   git config --global user.name '$USER'
@@ -96,17 +96,17 @@ jobs:
             - name: Login to DockerHub
               uses: docker/login-action@v2
               with:
-                  username: ${{ secrets.DOCKERHUB_USERNAME }}
+                  username: jack20191124
                   password: ${{ secrets.DOCKERHUB_TOKEN }}
             - name: Push image to DockerHub
               uses: docker/build-push-action@v3
               with:
                   context: .
                   push: true
-                  tags: ${{ secrets.DOCKERHUB_USERNAME }}/screwdriver:latest
+                  tags: jack20191124/screwdriver:latest
             - name: Docker Hub Description
               uses: peter-evans/dockerhub-description@v3
               with:
-                  username: ${{ secrets.DOCKERHUB_USERNAME }}
+                  username: jack20191124
                   password: ${{ secrets.DOCKERHUB_TOKEN }}
-                  repository: ${{ secrets.DOCKERHUB_USERNAME }}/screwdriver
+                  repository: jack20191124/screwdriver
