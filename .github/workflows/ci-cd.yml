@@ -62,9 +62,9 @@ jobs:
                   registry-url: "https://registry.npmjs.org"
             - name: Download auto-version bump scripts
               run: |
-                  git clone https://github.com/QubitPi/hashicorp-aws.git ../hashicorp-aws
-                  cp ../hashicorp-aws/.github/version-bump/tag-for-release.bash .github/
-                  cp ../hashicorp-aws/.github/version-bump/upversion.py .github/
+                  git clone git@github.com:generation-software/.github.git ../scripts
+                  cp ../scripts/.github/version-bump/tag-for-release.bash .github/
+                  cp ../scripts/.github/version-bump/upversion.py .github/
             - name: Tag for release
               run: |
                   git config --global user.name '$USER'
